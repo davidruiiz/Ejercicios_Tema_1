@@ -1,4 +1,3 @@
-from ast import main 
 
 def elementos_repetidos(lista_1, lista_2):
     # Creamos un conjunto vacío para almacenar los elementos repetidos
@@ -27,12 +26,12 @@ def elementos_repetidos(lista_1, lista_2):
     # Retornamos la lista de resultados
     return resultado
 
-lista_1 = ["h", 'o', 'l', 'a', ' ', 'm', 'u', 'n', 'd', 'o']
-lista_2 = ["h", 'o', 'l', 'a', ' ', 'l', 'u', 'n', 'a']
 
-resultado = elementos_repetidos(lista_1, lista_2)
-
-print(resultado)
 
 if __name__=="__main__":
-    main()
+    lista_1 = ["h", 'o', 'l', 'a', ' ', 'm', 'u', 'n', 'd', 'o']
+    lista_2 = ["h", 'o', 'l', 'a', ' ', 'l', 'u', 'n', 'a']
+
+    resultado = elementos_repetidos(lista_1, lista_2)
+
+    print(resultado)

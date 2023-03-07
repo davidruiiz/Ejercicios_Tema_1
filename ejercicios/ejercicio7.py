@@ -1,4 +1,3 @@
-from ast import main
 
 def agregar_una_vez(lista,el):
 
@@ -14,4 +13,7 @@ def agregar_una_vez(lista,el):
 
 # Ejecución del código principal.
 if __name__ == '__main__':
-    main()
+    lista = [1, 2, 3]
+    print(agregar_una_vez(lista, 4))
+    print(agregar_una_vez(lista, 4))
+    

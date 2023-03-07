@@ -1,4 +1,3 @@
-from ast import main
 
 def Nombre_Apellido():
     cadena = "zeréP nauJ,01"
@@ -8,6 +7,8 @@ def Nombre_Apellido():
     Nombre_Apellido=frase[1]
     return "{} ha sacado un {}".format(Nombre_Apellido, Nota_de_nota)
 
+
+
 if __name__=="__main__":
-    main()
+    print(Nombre_Apellido())
     

@@ -1,4 +1,3 @@
-from ast import main
 import sys
 
 def num():
@@ -24,7 +23,8 @@ def descomponer():
         if ceros_izquierda >= len(numero):
             break
 
-(descomponer())
+
 
 if __name__=="__main__":
-    main()
+    (descomponer())
+

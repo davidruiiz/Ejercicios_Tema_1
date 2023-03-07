@@ -1,4 +1,3 @@
-from ast import main
 
 def cola_tareas(tareas):
     # Ordenamos la lista de tareas por prioridad (el segundo elemento de cada tupla)
@@ -14,12 +13,11 @@ def cola_tareas(tareas):
     # Retornamos la cola de tareas
     return cola_tareas
 
-tareas = [("Tarea 1", 2), ("Tarea 2", 1), ("Tarea 3", 3), ("Tarea 4", 1)]
-
-cola = cola_tareas(tareas)
-
-print(cola)
 
 if __name__=="__main__":
-    main()
+    tareas = [("Tarea 1", 2), ("Tarea 2", 1), ("Tarea 3", 3), ("Tarea 4", 1)]
+
+    cola = cola_tareas(tareas)
+
+    print(cola)
     
