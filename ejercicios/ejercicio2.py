@@ -1,27 +1,30 @@
+"""
+Ejercicio 2
+Realiza un programa que cumpla el siguiente algoritmo utilizando siempre que sea posible operadores en asignación:
+Guarda en una variable numero_magico el valor 12345679 (sin el 8)
+Lee por pantalla otro numero_usuario, especifica que sea entre 1 y 9
+Multiplica el numero_usuario por 9 en sí mismo
+Multiplica el numero_magico por el numero_usuario en sí mismo
+Finalmente muestra el valor final del numero_magico por pantalla
+"""
+
+from ast import main
 import sys
 
-def num():
-    numero_magico=12345679
-    while True:
-        numero=(input("Nº entre 1 y 9: "))
-        try:
-            numero=int(numero)
-        except:
-            print("El caracter ni válido", file=sys.stderr)
-            pass
+
+numero_magico = 12345679
+
+def excepcion(numero):  
+    try:
+        numero=int(numero) 
+        if 1<=int(numero)<=9:
+            return int(numero)
         else:
-            if 1<=int(numero)<=9:
-                break
-                sys.exit()
-            else:
-                pass
-    n1=numero*9
-    print("{} multiplicado por 9 es {}".format(numero, n1))
-    valor_magico=numero_magico*n1
-    return "{} multiplicado por {} es {}".format(n1, numero_magico, valor_magico)
-
-
-
-if __name__=="__main__":
-    print(num())
+            raise ValueError("El número no está entre 1 y 9")
+    except:
+        raise ValueError("El caracter no aceptado")
     
+def num(numero):
+    numero=excepcion(numero)
+    return f'Resultado: {numero*9*numero_magico}'
+

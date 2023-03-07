@@ -1,23 +1,29 @@
+"""
+Ejercicio 4
+Durante la planificación de un proyecto se han acordado una lista de tareas. Para cada una de estas tareas se ha asignado un orden de prioridad (cuanto menor es el número de orden, más prioridad).
+¿Eres capaz de crear una estructura del tipo cola con todas las tareas ordenadas pero sin los números de orden?
+Sugerencia
+Para ordenar automáticamente una lista es posible utilizar el método .sort(), deberias probarlo.
+"""
 
-def cola_tareas(tareas):
-    # Ordenamos la lista de tareas por prioridad (el segundo elemento de cada tupla)
-    tareas.sort(key=lambda x: x[1])
+cola= [
+        {'tarea 3': 'ir a clase', 'prioridad':'3'},
+        {'tarea 1': 'levantarme', 'prioridad':'1'},
+        {'tarea 2': 'comer', 'prioridad':'2'}
+    ]
 
-    # Creamos una cola vacía para almacenar las tareas
-    cola_tareas = []
-
-    # Añadimos las tareas a la cola, pero sin el número de orden
-    for tarea in tareas:
-        cola_tareas.append(tarea[0])
-
-    # Retornamos la cola de tareas
-    return cola_tareas
+def ordenar(c):
+    return c['prioridad']
 
 
-if __name__=="__main__":
-    tareas = [("Tarea 1", 2), ("Tarea 2", 1), ("Tarea 3", 3), ("Tarea 4", 1)]
+def estructura_cola(cola):
+    cola.sort(key=ordenar)
+    lista=[]
+    for i in cola:
+        print(i)
+        lista.append(i)
+    return lista
 
-    cola = cola_tareas(tareas)
-
-    print(cola)
+if __name__=="main_":
+    estructura_cola(cola)
     
